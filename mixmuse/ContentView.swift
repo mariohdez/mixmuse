@@ -5,21 +5,30 @@
 //  Created by Mario Hernandez on 2/28/26.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    @State private var showingHello = false
 
     var body: some View {
         NavigationSplitView {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text(
+                            "Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))"
+                        )
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(
+                            item.timestamp,
+                            format: Date.FormatStyle(
+                                date: .numeric,
+                                time: .standard
+                            )
+                        )
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -33,9 +42,24 @@ struct ContentView: View {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
+                ToolbarItem {
+                    Button(action: sayHello) {
+                        Text("👋")
+                            .font(.title2)
+                    }
+                    .accessibilityLabel("Say Hello")
+                }
             }
+
         } detail: {
             Text("Select an item")
+        }
+        .sheet(isPresented: $showingHello) {
+            VStack {
+                Text("Hello!")
+                    .font(.system(size: 100))
+            }
+            .presentationDetents([.medium, .fraction(0.3)])
         }
     }
 
@@ -52,6 +76,10 @@ struct ContentView: View {
                 modelContext.delete(items[index])
             }
         }
+    }
+
+    private func sayHello() {
+        showingHello = true
     }
 }
 
