@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E17F28132F53C0EE0032F604 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E17F28122F53C0E70032F604 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E1E91D582F53BBFA00E52A4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E17F28122F53C0E70032F604 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
 		E1E91D482F53BBF900E52A4F /* mixmuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mixmuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E91D572F53BBFA00E52A4F /* mixmuseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mixmuseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E91D612F53BBFA00E52A4F /* mixmuseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mixmuseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		E1E91D3F2F53BBF800E52A4F = {
 			isa = PBXGroup;
 			children = (
+				E17F28122F53C0E70032F604 /* README.md */,
 				E1E91D4A2F53BBF900E52A4F /* mixmuse */,
 				E1E91D5A2F53BBFA00E52A4F /* mixmuseTests */,
 				E1E91D642F53BBFA00E52A4F /* mixmuseUITests */,
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17F28132F53C0EE0032F604 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
