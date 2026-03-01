@@ -1,0 +1,31 @@
+# --- Xcode / Swift 6 Essentials ---
+# Contains build artifacts and index files (regenerated every build)
+DerivedData/
+build/
+
+# User-specific settings (window positions, open tabs, breakpoints)
+xcuserdata/
+*.xcuserdatad
+*.xcuserstate
+
+# --- Swift Package Manager (SPM) ---
+.build/
+
+# --- SwiftData & Databases ---
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# --- Swift Testing / XCTest ---
+*.xcresult/
+*.bubble
+
+# --- macOS System Noise ---
+.DS_Store
+*.swp
+*.lock
+
+# --- Security / Sensitive Info ---
+.env
+*.xcconfig
+
